@@ -33,6 +33,16 @@ Ensure you have the following installed:
    uvicorn main:app --reload
    ```
 
+## Tools, Frameworks, and Libraries Used
+- **FastAPI**: Framework for building fast and efficient APIs with Python.
+- **Uvicorn**: Lightning-fast ASGI server for serving the FastAPI application.
+- **Gradio**: Interactive UI framework for building machine learning demos and applications.
+- **AWS S3**: Cloud storage service for storing processed images.
+- **Requests**: Python library for making HTTP requests to fetch and send data.
+- **Pillow**: Imaging library for basic image processing tasks.
+- **OpenCV**: Advanced image manipulation and computer vision.
+- **NumPy**: Numerical computations for handling image arrays.
+
 ## API Endpoints
 
 ### 1. Root Endpoint
@@ -62,20 +72,35 @@ Ensure you have the following installed:
   }
   ```
 
+## Postman Collection
+To test the API endpoints, a Postman collection is included in the repository:
+1. Import the Postman collection JSON file into Postman.
+2. Update the environment variables (if any) such as `BASE_URL` to point to your running API server eg http://127.0.0.1:8000
+3. Use the predefined requests to test the API.
+
+### Running the Postman Collection
+1. Open Postman and navigate to the collection.
+2. Run the `Background Removal` request under the collection.
+3. Verify the responses for successful background removal and AWS S3 image URL.
+
 ## Project Structure
 - **`main.py`**: Entry point for the FastAPI application, containing API endpoints.
 - **`gradio_helper.py`**: Helper functions for interacting with the Gradio-based model.
 - **`requirements.txt`**: Python dependencies.
 - **`__init__.py`**: Package initializer.
 - **`README.md`**: Project documentation.
+- **`postman_collection.json`**: Postman collection file for testing API endpoints.
 
 ## Dependencies
 - **FastAPI**: Framework for building APIs.
 - **Uvicorn**: ASGI server for running the FastAPI application.
 - **Requests**: HTTP library for downloading images.
 - **Pillow**: Python Imaging Library for image processing.
-- **NumPy**: Numerical computations.
+- **NumPy**: Array manipulations for image data.
 - **OpenCV**: Advanced image processing.
+- **Mask R-CNN ResNet50 FPN**: Object segmentation model for background removal.
+- **Hugging Face Space**: Platform for running and sharing machine learning models, ensuring the background removal model is available continuously.
+- **AWS S3**: Cloud storage service for storing processed images.
 
 Install all dependencies using:
 ```bash
