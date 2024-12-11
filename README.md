@@ -117,11 +117,8 @@ pip install -r requirements.txt
 
 3. Retrieve the processed image URL from the API response.
 
-## License
-This project is licensed under the MIT License. See `LICENSE` for more details.
 
-## Contributions
-Contributions are welcome! Please open an issue or submit a pull request for any suggestions or fixes.
+
 
 ## Contact
-For inquiries or support, please contact [Your Name] at [Your Email].
+For inquiries or support, please contact Saarthak Sharma, Raj Krishna , Naman Gupta and Sanskriti Goyal at 21ume043@lnmiit.ac.in.
