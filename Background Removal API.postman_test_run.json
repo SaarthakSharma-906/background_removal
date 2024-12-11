@@ -1,0 +1,110 @@
+{
+	"id": "52883f25-c108-4c4b-b109-d3001d08ab21",
+	"name": "Background Removal API",
+	"timestamp": "2024-12-11T20:19:23.656Z",
+	"collection_id": "40341775-a502da0c-b305-4225-aa94-88f8c01de6a9",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-11T20:18:29.133Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4fa55ae5-c249-47e4-a624-106be8a789bb",
+			"name": "Remove Background - Sofa",
+			"url": "http://127.0.0.1:8000/remove_background",
+			"time": 13619,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13619
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8f77820e-135f-4392-9dd6-6c5dbe47e61d",
+			"name": "Remove Background - Car",
+			"url": "http://127.0.0.1:8000/remove_background",
+			"time": 13438,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13438
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5d4fd5d4-2694-4057-97af-953f4d8ed7c9",
+			"name": "Remove Background - Jacket",
+			"url": "http://127.0.0.1:8000/remove_background",
+			"time": 12688,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12688
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3f058f34-bf59-49d5-a020-f3556df76224",
+			"name": "Remove Background - Oil Bottle",
+			"url": "http://127.0.0.1:8000/remove_background",
+			"time": 14001,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14001
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 53746,
+	"collection": {
+		"requests": [
+			{
+				"id": "4fa55ae5-c249-47e4-a624-106be8a789bb",
+				"method": "POST"
+			},
+			{
+				"id": "8f77820e-135f-4392-9dd6-6c5dbe47e61d",
+				"method": "POST"
+			},
+			{
+				"id": "5d4fd5d4-2694-4057-97af-953f4d8ed7c9",
+				"method": "POST"
+			},
+			{
+				"id": "3f058f34-bf59-49d5-a020-f3556df76224",
+				"method": "POST"
+			}
+		]
+	}
+}
