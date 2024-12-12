@@ -30,13 +30,17 @@ Ensure you have the following installed:
    AWS_SECRET_ACCESS_KEY=<your-secret-access-key>
    AWS_REGION=<your-aws-region>
    ```
+   For sample usage you can use bucket created for this project ,
+   AWS_ACCESS_KEY_ID= 'AKIAXNGUU7TZRV7GFHXF'
+   AWS_SECRET_ACCESS_KEY= 'uSmB5V33KeR+YirEi/cxYZGe9zHsee/UBhUoSPKR'
+   AWS_REGION='ap-south-1'
 
-3. Install the required dependencies:
+4. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Start the server:
+5. Start the server:
    ```bash
    uvicorn main:app --reload
    ```
