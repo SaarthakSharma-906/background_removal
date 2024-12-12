@@ -7,6 +7,7 @@ This project provides a web-based API for removing the background from images us
 - **FastAPI**-based RESTful API.
 - Gradio-based background removal model.
 - AWS S3 integration for processed image storage.
+- Environment variables for securely managing AWS credentials.
 - Bounding box customization for precise background removal.
 
 ## Installation
@@ -23,12 +24,19 @@ Ensure you have the following installed:
    cd background_removal-main
    ```
 
-2. Install the required dependencies:
+2. Create a `.env` file in the project root directory to store your AWS credentials. The file should look like this:
+   ```
+   AWS_ACCESS_KEY_ID=<your-access-key-id>
+   AWS_SECRET_ACCESS_KEY=<your-secret-access-key>
+   AWS_REGION=<your-aws-region>
+   ```
+
+3. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Start the server:
+4. Start the server:
    ```bash
    uvicorn main:app --reload
    ```
@@ -75,7 +83,7 @@ Ensure you have the following installed:
 ## Postman Collection
 To test the API endpoints, a Postman collection is included in the repository:
 1. Import the Postman collection JSON file into Postman.
-2. Update the environment variables (if any) such as `BASE_URL` to point to your running API server eg http://127.0.0.1:8000
+2. Update the environment variables (if any) such as `BASE_URL` to point to your running API server (e.g., `http://127.0.0.1:8000`).
 3. Use the predefined requests to test the API.
 
 ### Running the Postman Collection
@@ -87,7 +95,7 @@ To test the API endpoints, a Postman collection is included in the repository:
 - **`main.py`**: Entry point for the FastAPI application, containing API endpoints.
 - **`gradio_helper.py`**: Helper functions for interacting with the Gradio-based model.
 - **`requirements.txt`**: Python dependencies.
-- **`__init__.py`**: Package initializer.
+- **`.env`**: Environment file for securely storing AWS credentials.
 - **`README.md`**: Project documentation.
 - **`postman_collection.json`**: Postman collection file for testing API endpoints.
 
@@ -98,9 +106,9 @@ To test the API endpoints, a Postman collection is included in the repository:
 - **Pillow**: Python Imaging Library for image processing.
 - **NumPy**: Array manipulations for image data.
 - **OpenCV**: Advanced image processing.
-- **Mask R-CNN ResNet50 FPN**: Object segmentation model for background removal.
-- **Hugging Face Space**: Platform for running and sharing machine learning models, ensuring the background removal model is available continuously.
+- **Hugging Face Space**: Platform for running and sharing machine learning models.
 - **AWS S3**: Cloud storage service for storing processed images.
+- **Python-Dotenv**: For securely loading environment variables from the `.env` file.
 
 Install all dependencies using:
 ```bash
@@ -108,17 +116,18 @@ pip install -r requirements.txt
 ```
 
 ## Usage Guide
-1. Start the API server:
+1. Create and configure your `.env` file with AWS credentials as mentioned above.
+
+2. Start the API server:
    ```bash
    uvicorn main:app --reload
    ```
 
-2. Send a POST request to `/remove_background` with a JSON body containing the image URL and bounding box coordinates.
+3. Send a POST request to `/remove_background` with a JSON body containing the image URL and bounding box coordinates.
 
-3. Retrieve the processed image URL from the API response.
+4. Retrieve the processed image URL from the API response.
 
-
-
+---
 
 ## Contact
-For inquiries or support, please contact Saarthak Sharma, Raj Krishna , Naman Gupta and Sanskriti Goyal at 21ume043@lnmiit.ac.in.
+For inquiries or support, please contact Saarthak Sharma, Raj Krishna, Naman Gupta, and Sanskriti Goyal at **21ume043@lnmiit.ac.in**.
